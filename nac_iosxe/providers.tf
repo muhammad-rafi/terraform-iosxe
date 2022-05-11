@@ -1,4 +1,4 @@
-# Network To Code iosxe Provider Declaration
+# Network as Code iosxe Provider Declaration
 terraform {
   required_providers {
     iosxe = {
@@ -8,7 +8,7 @@ terraform {
   }
 }
 
-# Network To Code iosxe Provider Configuration
+# Network as Code iosxe Provider Configuration
 provider "iosxe" {
   alias    = "cisco_sandbox"
   username = "developer"
