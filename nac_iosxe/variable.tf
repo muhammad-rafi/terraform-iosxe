@@ -33,7 +33,7 @@ variable "loopback_interfaces" {
   default = [
     {
       name              = 100
-      description       = "Created via Terraform"
+      description       = "Created via variable.tf"
       ipv4_address      = "10.0.1.10"
       ipv4_address_mask = "255.255.255.255"
       # vrf_forwarding    = "VRF_1"
@@ -41,7 +41,7 @@ variable "loopback_interfaces" {
     },
     {
       name              = 200
-      description       = "Created via Terraform"
+      description       = "Created via variable.tf"
       ipv4_address      = "10.0.2.10"
       ipv4_address_mask = "255.255.255.255"
       # vrf_forwarding    = "VRF_2"
@@ -49,7 +49,7 @@ variable "loopback_interfaces" {
     },
     {
       name              = 300
-      description       = "Created via Terraform"
+      description       = "Created via variable.tf"
       ipv4_address      = "10.0.3.10"
       ipv4_address_mask = "255.255.255.255"
       # vrf_forwarding    = "VRF_3"
@@ -67,6 +67,6 @@ variable "vrfs" {
 # List of number VLAN Variable 
 variable "vlan_ids" {
   type    = list(number)
-  default = [100, 200, 300]
+  default = [10, 20, 30]
 }
 
