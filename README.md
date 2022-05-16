@@ -112,6 +112,22 @@ Terraform loads variables in the following order, with later sources taking prec
 
 *Reference: https://www.terraform.io/language/values/variables*
 
+### Loops in Terraform
+
+* *for* expression creates a complex type value by transforming another complex type value. Each element in the input value can correspond to either one or zero values in the result, and an arbitrary expression can be used to transform each input element into an output element.
+
+https://www.terraform.io/language/expressions/for
+
+* **for_each** meta-argument accepts a map or a set of strings, and creates an instance for each item in that map or set. Each instance has a distinct infrastructure object associated with it, and each is separately created, updated, or destroyed when the configuration is applied.
+
+https://www.terraform.io/language/meta-arguments/for_each
+
+* **count** is a meta-argument defined by the Terraform language. It can be used with modules and with every resource type.
+
+https://www.terraform.io/language/meta-arguments/count
+
+Checkout my `loopback_interfaces.tf` and `vrf.tf` where I have used these loops.  
+
 ## Author 
 __[Muhammad Rafi](https://www.linkedin.com/in/muhammad-rafi-0a37a248/)__
 

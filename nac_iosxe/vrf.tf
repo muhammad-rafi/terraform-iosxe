@@ -21,9 +21,16 @@
 #   ]
 # }
 
-# Create multiple vrf on the iosxe device with variable 
+# # Create multiple vrf on the iosxe device with variable and count
+# resource "iosxe_vrf" "create_vrf" {
+#   provider = iosxe.cisco_sandbox
+#   count    = length(var.vrfs)
+#   name     = var.vrfs[count.index]
+# }
+
+# Create multiple vrf on the iosxe device with variable and for_each
 resource "iosxe_vrf" "create_vrf" {
   provider = iosxe.cisco_sandbox
-  count    = length(var.vrfs)
-  name     = var.vrfs[count.index]
+  for_each = toset(var.vrfs)
+  name     = each.value
 }
