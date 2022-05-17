@@ -1,11 +1,12 @@
-# Network as Code iosxe Provider Declaration
+# Terraform and Network as Code iosxe Provider Declaration
 terraform {
   required_providers {
     iosxe = {
       source  = "netascode/iosxe"
-      version = ">=0.1.5"
+      version = ">=0.1.7"
     }
   }
+  required_version = ">=1.1.8"
 }
 
 # Network as Code iosxe Provider Configuration

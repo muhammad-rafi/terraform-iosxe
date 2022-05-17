@@ -8,33 +8,33 @@ hostname = "csr1000v-devvars"
 # List of Loopback interfaces
 loopback_interfaces = [
   {
-    name              = 400
-    description       = "Created via terraform.tfvars"
-    ipv4_address      = "10.0.4.10"
+    name              = 1000
+    description       = "Created via dev.tfvars"
+    ipv4_address      = "10.0.10.10"
     ipv4_address_mask = "255.255.255.255"
-    # vrf_forwarding    = "VRF_1"
+    # vrf_forwarding    = "VRF_10"
     admin_status = false
   },
   {
-    name              = 500
-    description       = "Created via terraform.tfvars"
-    ipv4_address      = "10.0.5.10"
+    name              = 1100
+    description       = "Created via dev.tfvars"
+    ipv4_address      = "10.0.11.10"
     ipv4_address_mask = "255.255.255.255"
-    # vrf_forwarding    = "VRF_2"
+    # vrf_forwarding    = "VRF_11"
     admin_status = false
   },
   {
-    name              = 600
-    description       = "Created via terraform.tfvars"
-    ipv4_address      = "10.0.6.10"
+    name              = 1200
+    description       = "Created via dev.tfvars"
+    ipv4_address      = "10.0.12.10"
     ipv4_address_mask = "255.255.255.255"
-    # vrf_forwarding    = "VRF_3"
+    # vrf_forwarding    = "VRF_12"
     admin_status = false
   }
 ]
 
 # List of VRFs 
-vrfs = ["VRF_4", "VRF_5", "VRF_6"]
+vrfs = ["VRF_10", "VRF_11", "VRF_12"]
 
 # List of VLANs
-vlan_ids = [40, 50, 60]
+vlan_ids = [100, 110, 120]

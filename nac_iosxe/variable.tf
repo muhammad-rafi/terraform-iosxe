@@ -70,3 +70,20 @@ variable "vlan_ids" {
   default = [10, 20, 30]
 }
 
+# # Local BGP configuration 
+# variable "bgp_conf_params" {
+#   type = map(object({
+#     asn                  = string
+#     default_ipv4_unicast = bool
+#     log_neighbor_changes = bool
+#     router_id_loopback   = number
+#   }))
+#   description = "map of objects"
+#   default = {
+#     asn                  = "65001"
+#     default_ipv4_unicast = true
+#     log_neighbor_changes = true
+#     router_id_loopback   = 100
+#     }
+#   }
+
