@@ -83,8 +83,9 @@ $ terraform import iosxe_static_route.static_route "Cisco-IOS-XE-native:native/i
 # Replace the providers from 'netascode/iosxe' to 'CiscoDevNet/iosxe'
 $ terraform state replace-provider netascode/iosxe CiscoDevNet/iosxe 
 
-# Terraform Resource Graph
-$ terraform graph | dot -Tpng > terra-graph.png
+# Generate a Terraform Resource Graph
+$ terraform graph | dot -Tpng > terra-iosxe-graph.png
+$ terraform graph | dot -Tsvg > terra-iosxe-graph.svg
 
 # Terraform commands running with CLI variables
 $ terraform plan -var="hostname=csr1000v-2"
