@@ -75,7 +75,7 @@ $ terraform plan -target iosxe_rest
 $ terraform apply -target main.rtf
 $ terraform apply -target get_configs.tf (apply with specific .tf file)
 $ terraform apply -target iosxe_rest.get_interfaces (apply with specific resource)
-$ terraform apply -target=module.<module_name> (apply with specific module)
+$ terraform apply -target=module.bgp_config (apply with specific module)
 
 # Import the existing user from the device (note: resource "iosxe_static_route.static_route" must exists otherwise won't import )
 $ terraform import iosxe_static_route.static_route "Cisco-IOS-XE-native:native/ip/route/ip-route-interface-forwarding-list=10.20.0.0,255.255.255.0"
